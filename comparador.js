@@ -15,8 +15,8 @@ return resultado
 form.addEventListener('submit',function(e) {
     e.preventDefault()
 
-    const A = parseInt(document.getElementById('numero-A').value)
-    const B = parseInt(document.getElementById('numero-B').value)
+    const A = parseInt(document.querySelector('#numero-A').value)
+    const B = parseInt(document.querySelector('#numero-B').value)
 
     const mensagemErro = "B não é maior que A"
     const mensagemSucesso ="B é maior que A"
@@ -25,13 +25,13 @@ form.addEventListener('submit',function(e) {
     const AeMaior = comparador(A,B)
 
     if(AeMaior) {
-        const mensagem = document.getElementById('mensagem')
+        const mensagem = document.querySelector('#mensagem')
         mensagem.innerHTML = mensagemErro
         mensagem.style.display = "block"
 
     }
     else {
-        const mensagem = document.getElementById('mensagem')
+        const mensagem = document.querySelector('#mensagem')
         mensagem.innerHTML = mensagemSucesso
         mensagem.style.display = "block"
     }
